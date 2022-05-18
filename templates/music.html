@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='styles/music.css') }}">
+{% endblock %}
+
+{% block title %}
+КЛУБЫ ВЕТЕРАНОВ РОССИИ
+{% endblock %}
+
+{% block main %}
+<h1>песни со РОССИИ</h1>
+<h2>плейлисты</h2>
+<div class="musics">
+    <div class="play_lists">
+        <a href="#"><img src="/static/images/play_list1.png" alt="play_list1"></a>
+        <a href="#"><img src="/static/images/play_list2.png" alt="play_list2"></a>
+        <a href="#"><img src="/static/images/play_list3.png" alt="play_list3"></a>
+    </div>
+    <div class="songs">
+        {% for i in range(20) %}
+            <div class="song">
+                <img src="/static/images/play.png" alt="play">
+                <div class="info">
+                    <h1>во сне (мария станциер)</h1>
+                    <h2>ссо монолит (коми)</h2>
+                </div>
+                <h2 class="time">2:19</h2>
+                <img src="/static/images/download.png" alt="download" class="download">
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

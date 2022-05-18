@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/header_footer.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='fonts/font.css') }}">
+    {% block head %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <a href="/"><img src="static/images/logo.png" alt="logo"></a>
+        <nav>
+            <a href="/about">О НАС</a>
+            <a href="/first_slet">1-Й СЛЕТ ВЕТЕРАНОВ ВССО - РСО</a>
+            <a href="/documents">ДОКУМЕНТАЦИЯ</a>
+            <a href="/clubs">КЛУБЫ ВЕТЕРАНОВ РОССИИ</a>
+            <a href="/news">НОВОСТИ</a>
+            <a href="/gallery">ФОТОГАЛЕРЕЯ</a>
+            <a href="/music">ПЕСНИ СО РОССИИ</a>
+            <a href="/contacts">КОНТАКТЫ</a>
+        </nav>
+    </header>
+    <main>
+        {% block main %}
+        
+        {% endblock %}
+    </main>
+    <footer>
+        <h1>© 2021 Официальный сайт движения ветеранов студенческих отрядов</h1>
+        <a href="#"><img src="static/images/vk.png" alt="vk"></a>
+        <a href="#"><img src="static/images/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="static/images/facebook.png" alt="facebook"></a>
+        <div class="contact_info">  
+            <p>КОНТАКТНОЕ ЛИЦО:</p>
+            <h1>ТАТЬЯНА ЗВЕРЕВА</h1>
+            <h1>+7 (913) 220-91-75</h1>
+        </div>  
+    </footer>
+</body>
+</html>

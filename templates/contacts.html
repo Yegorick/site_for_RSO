@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='styles/contacts.css') }}">
+{% endblock %}
+
+{% block title %}
+КЛУБЫ ВЕТЕРАНОВ РОССИИ
+{% endblock %}
+
+{% block main %}
+<div class="contact">
+    <img src="/static/images/Tatyana.png" alt="Tatyana">
+    <div class="info">
+        <h1>татьяна ЗВЕРЕВА</h1>
+        <h2>+7 (913) 220-91-75</h2>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+main{
+    font-family: 'Akrobat';
+    color: #fff;
+    margin: 0% 4% 0 5%;
+}
+
+main h1{
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+main p{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.post{
+    position: relative;
+    display: flex;
+    max-width: 73%;
+    margin-bottom: 3%;
+}
+
+.post img{
+    position: relative;
+    width: 30%;
+    height: 30%;
+}
+
+.post:last-child{
+    padding-bottom: 10%;
+}
+
+.info{
+    position: absolute;
+    left: 35%;
+    top: -3%;
+    height: 102%;
+    align-items: flex-end;
+}
+
+.info h1{
+    line-height: 85%;
+    margin-bottom: 5%;
+}
+
+.info h4{
+    position: absolute;
+    bottom: -13%;
+}
+
+.post:last-child h4{
+    bottom: 33%;
+}

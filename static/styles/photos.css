@@ -1,0 +1,30 @@
+main{
+    font-family: 'Akrobat';
+    color: #fff;
+    margin: 0% 4% 0 5%;
+}
+
+main h1{
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 2%;
+    line-height: 70%;
+}
+
+.photos{
+    display: flex;
+}
+
+.photos:last-child{
+    padding-bottom: 10%;
+}
+
+.column{
+    margin-right: 0.5%;
+}
+
+.column img{
+    width: 100%;
+    margin-bottom: 1%;
+}

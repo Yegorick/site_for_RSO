@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block main %}
+<div class="carousel">
+    <div class="slide fade">
+        <img src="static/images/slide_show/first.jpg" style="width: 100%;" alt="">
+    </div>
+    <div class="slide fade">
+        <img src="static/images/slide_show/second.jpg" style="width: 100%;" alt="">
+    </div>
+    <div class="slide fade">
+        <img src="static/images/slide_show/third.jpg" style="width: 100%;" alt="">
+    </div>
+    <a class="prev" onclick="plusSlide(-1)">&#10094</a>
+    <a class="next" onclick="plusSlide(1)">&#10095</a>
+    <div class="dotes" style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+<script src="static/scripts/carousel.js"></script>
+<div class="posts">
+    <div class="post">
+        <img src="static/images/blank.png" alt="">
+        <h1>ЗАКРЫТИЕ ТРЕТЬЕГО ТРУДОВОГО СЕМЕСТРА</h1>
+        <p>26 октября</p>
+    </div>
+    <div class="post">
+        <img src="static/images/blank.png" alt="">
+        <h1>СЛЁТ СОП 2021</h1>
+        <p>07 ноября</p>
+    </div>
+    <div class="post">
+        <img src="static/images/blank.png" alt="">
+        <h1>ВСС062</h1>
+        <p>12 ноября</p>
+    </div>
+    <div class="post">
+        <img src="static/images/blank.png" alt="">
+        <h1>ДЕНЬ РСО</h1>
+        <p>17 февраля</p>
+    </div>
+</div>
+<div class="info">
+    <div class="info_post">
+        <h1>20.10</h1>
+        <h1>«В связи с ухудшением эпидемиологической обстановки в стране проведение #ВССО62 в очном формате
+             с 12 по 14 ноября невозможно».</h1>
+    </div>
+    <div class="info_post">
+        <h1>19.10</h1>
+        <h1>Повар спрашивает повара...
+            Давай представим, что ты не помнишь откуда эта фраза и просто поговорим о профессии повара. Зачем?</h1>
+    </div>
+    <div class="info_post">
+        <h1>17.10</h1>
+        <h1>Принимай участие во Всероссийском молодёжном конкурсе работ, посвященных памятным
+             датам Великой Отечественной войны «Памяти верны».</h1>
+    </div>
+    <div class="info_post">
+        <h1>13.10</h1>
+        <h1>Ты студент, ищешь подработку? Попади в крутую команду молодых ребят. Важно лишь твое
+             желание, а остальное мы сделаем за тебя.</h1>
+    </div>
+    <div class="info_post">
+        <h1>05.10</h1>
+        <h1>Готов потрудиться этой зимой?
+            «Мирный атом» и «Мирный атом - ПРОРЫВ» ждут стройотряды!</h1>
+    </div>
+    <div class="info_post">
+        <h1>05.10</h1>
+        <h1>Донской край принял Окружную спартакиаду студенческих отрядов</h1>
+    </div>
+    <div class="info_post">
+        <h1>03.10</h1>
+        <h1>Кто-то продолжает династию врачей, кто-то династию пожарных, а есть те,
+             кто продолжает династию бойцов студенческих отрядов.</h1>
+    </div>
+    <div class="info_post">
+        <h1>23.09</h1>
+        <h1>С 15 по 16 октября в онлайн-формате состоится Всероссийский форум «Поколение ZОЖ — 2021».</h1>
+    </div>
+    <div class="info_post">
+        <h1>22.09</h1>
+        <h1>С 22 по 28 сентября во Всероссийском детском центре «Смена» проходит профориентационная
+             смена Российских студенческих отрядов #ТрудКрут.</h1>
+    </div>
+    <div class="info_post">
+        <h1>17.09</h1>
+        <h1>Совсем скоро станут известны результаты заочного этапа Всероссийского конкурса профессионального
+             мастерства «ТрудКрут» по каждому из направлений</h1>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='styles/photos.css') }}">
+{% endblock %}
+
+{% block title %}
+КЛУБЫ ВЕТЕРАНОВ РОССИИ
+{% endblock %}
+
+{% block main %}
+    <h1>"Название альбома"</h1>
+    {% for i in range(6) %}
+        <div class="photos">
+            {% for i in range(5) %}
+                <div class="column">
+                    <img src="/static/images/blank.png" alt="">
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endblock %}

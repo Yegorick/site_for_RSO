@@ -1,0 +1,30 @@
+main{
+    font-family: 'Akrobat';
+    color: #fff;
+    margin: 0% 4% 0 5%;
+}
+
+main h1{
+    font-size: 2.7em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 2%;
+    line-height: 70%;
+}
+
+main h2{
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 2%;
+    line-height: 10%;
+}
+
+.contact{
+    display: flex;
+}
+
+.contact img{
+    margin-right: 2%;
+    width: 10%;
+}

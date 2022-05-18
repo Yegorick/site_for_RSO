@@ -1,0 +1,90 @@
+html {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+}
+
+body{
+
+    background: linear-gradient(0, #c69c59, #d1a153);
+    min-height: 100%;
+    height: 100%;
+    margin: 0 0 -100px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header{
+    padding: 2% 4%;
+}
+
+header img{
+    margin-left: 1.5%;
+    margin-bottom: 2%;
+    max-width: 13%;
+}
+
+header nav a{
+    color: #ffffff;
+    padding: 1.1%;
+    margin-top: 1%;
+    text-decoration: none;
+    font-family: 'Akrobat';
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+main{
+    position: relative;
+}
+
+footer{
+    position: fixed;
+    bottom: 0%;
+    left: -1%;
+    height: 4%;
+    width:93%;
+    padding: 2% 4%;
+    background-color: #d0a053;
+    display: flex;
+    line-height:0%;
+    z-index: 1;
+
+}
+
+footer h1{
+    font-family: 'Akrobat';
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 23%;
+    line-height:100%;
+}
+
+footer a{
+
+    margin-left: 1%;
+}
+
+.contact_info{
+    position: absolute;
+    right: 4%;
+}
+
+.contact_info h1{
+    font-family: 'Akrobat';
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 13px;
+    margin-right: 0 !important;
+    line-height: 30%;
+}
+
+.contact_info p{
+    font-family: 'Akrobat';
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 5%;
+}
