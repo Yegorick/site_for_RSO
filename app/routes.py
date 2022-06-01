@@ -1,6 +1,6 @@
-from flask import Flask, render_template, url_for
+from flask import render_template, url_for
 
-app = Flask(__name__)
+from app import app
 
 @app.route('/')
 def index():
@@ -41,6 +41,3 @@ def music():
 @app.route('/contacts')
 def contacts():
     return render_template('contacts.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)

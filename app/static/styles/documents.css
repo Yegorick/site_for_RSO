@@ -27,7 +27,7 @@ main p{
     float: right;
     align-items: center;
     width: 100%;
-    height: 20%;
+    height: max-content;
     display: flex;
     background-color: #dca54d;
     margin-bottom: 3%;

@@ -1,3 +1,5 @@
+
+
 html {
     position: relative;
     min-height: 100%;
@@ -37,20 +39,19 @@ header nav a{
 
 main{
     position: relative;
+    min-height: calc(72vh - 60px);
 }
 
 footer{
-    position: fixed;
-    bottom: 0%;
-    left: -1%;
-    height: 4%;
-    width:93%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    bottom: 0;
+    height: 30px;
+    align-items: center;
     padding: 2% 4%;
     background-color: #d0a053;
     display: flex;
     line-height:0%;
-    z-index: 1;
-
 }
 
 footer h1{
@@ -63,8 +64,12 @@ footer h1{
 }
 
 footer a{
+    width: 75px;
 
-    margin-left: 1%;
+}
+
+footer img{
+    width:45px;
 }
 
 .contact_info{
