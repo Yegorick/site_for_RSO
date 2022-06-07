@@ -1,6 +1,10 @@
 from flask import render_template, url_for
+import os
 
-from app import app
+from app import app, db, Songs, Document
+
+file_path = os.path.abspath(os.path.dirname(__name__))
+
 
 @app.route('/')
 def index():
@@ -16,7 +20,18 @@ def first_slet():
 
 @app.route('/documents')
 def documents():
-    return render_template('documents.html')
+    docs = db.session.query(Document).all()
+    spis = {}
+    for i in docs:
+        size = os.path.getsize(f'{file_path}/app/static/storage/files/{i.title}.pdf') / 1000
+        if size >= 1000:
+            size /= 1000
+            size_str = f'{str(size)[:4]} МБ'
+            print(size_str)
+        else:
+            size_str = f'{str(size)[:4]} КБ'
+        spis[i.title] = size_str
+    return render_template('documents.html', docs = docs, size=spis)
 
 @app.route('/clubs')
 def clubs():
@@ -36,7 +51,8 @@ def photos():
 
 @app.route('/music')
 def music():
-    return render_template('music.html')
+    songs = db.session.query(Songs).all()
+    return render_template('music.html', songs = songs)
 
 @app.route('/contacts')
 def contacts():

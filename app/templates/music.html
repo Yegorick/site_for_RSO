@@ -18,16 +18,10 @@
         <a href="#"><img src="/static/images/play_list3.png" alt="play_list3"></a>
     </div>
     <div class="songs">
-        {% for i in range(20) %}
-            <div class="song">
-                <img src="/static/images/play.png" alt="play">
-                <div class="info">
-                    <h1>во сне (мария станциер)</h1>
-                    <h2>ссо монолит (коми)</h2>
-                </div>
-                <h2 class="time">2:19</h2>
-                <img src="/static/images/download.png" alt="download" class="download">
-            </div>
+        {% for i in songs %}
+            <audio src="/static/storage/songs/{{i.title}}.mp3" controls>
+                <h1>{{ i.title }}</h1>
+            </audio>
         {% endfor %}
     </div>
 </div>

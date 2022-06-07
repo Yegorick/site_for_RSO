@@ -9,39 +9,17 @@
 {% endblock %}
 
 {% block main %}
-    <div class="first">
-        {% for i in range(5) %}
+    <div class="container">
+        {% for i in docs %}
             <div class="doc">
                 <img src="/static/images/file.png" alt="file" class="doc_ico">
                 <div class="info">
-                    <h2>Положение о 1-й Слет ветеранов ВССО - РСО</h2>
-                    <h2>4 кб</h2>
+                    <h2>{{ i.title }}</h2>
+                    <h2>{{ size[i.title] }}</h2>
                 </div>
-                <img src="/static/images/download.png" alt="download" class="download">
-            </div>
-        {% endfor %}
-    </div>
-    <div class="second">
-        {% for i in range(5) %}
-            <div class="doc">
-                <img src="/static/images/file.png" alt="file" class="doc_ico">
-                <div class="info">
-                    <h2>Положение о 1-й Слет ветеранов ВССО - РСО</h2>
-                    <h2>4 кб</h2>
-                </div>
-                <img src="/static/images/download.png" alt="download" class="download">
-            </div>
-        {% endfor %}
-    </div>
-    <div class="third">
-        {% for i in range(5) %}
-            <div class="doc">
-                <img src="/static/images/file.png" alt="file" class="doc_ico">
-                <div class="info">
-                    <h2>Положение о 1-й Слет ветеранов ВССО - РСО</h2>
-                    <h2>4 кб</h2>
-                </div>
-                <img src="/static/images/download.png" alt="download" class="download">
+                <a href="/static/storage/files/{{ i.title }}.pdf" download="">
+                    <img src="/static/images/download.png" alt="download" class="download">
+                </a>
             </div>
         {% endfor %}
     </div>
