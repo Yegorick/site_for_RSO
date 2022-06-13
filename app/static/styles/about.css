@@ -16,6 +16,11 @@ main p{
     font-weight: 600;
 }
 
+main ul li{
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
 .photos{
     display: flex;
 }

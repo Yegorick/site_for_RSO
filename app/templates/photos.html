@@ -10,13 +10,11 @@
 
 {% block main %}
     <h1>"Название альбома"</h1>
-    {% for i in range(6) %}
-        <div class="photos">
-            {% for i in range(5) %}
-                <div class="column">
-                    <img src="/static/images/blank.png" alt="">
-                </div>
-            {% endfor %}
-        </div>
-    {% endfor %}
+    <div class="photos">
+        {% for i in photos %}
+            <div class="photo">
+                <img src="/static/storage/albums/{{ album.title }}/{{ i }}" alt="">
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

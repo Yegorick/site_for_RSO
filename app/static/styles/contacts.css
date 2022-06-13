@@ -20,11 +20,22 @@ main h2{
     line-height: 10%;
 }
 
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .contact{
     display: flex;
+    max-width: fit-content;
 }
 
 .contact img{
     margin-right: 2%;
-    width: 10%;
+    width: 150px;
+}
+
+.contact .info h1{
+    white-space: nowrap;
 }

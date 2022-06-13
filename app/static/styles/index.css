@@ -83,22 +83,29 @@
     display: flex;
     margin-left: 4%;
     color: #fff;
+    justify-content: space-between;
+    max-width: 980px;
 }
 
-.post{
+.posts a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a .post{
     margin-left: 3%;
     max-width: 1290px;
 }
 
-.post img{
+a .post img{
     max-width: 200px;
 }
 
-.post h1{
+.posts a .post h1{
     font-family: 'Akrobat';
     font-weight: 600;
     font-size: 0.75em;
-    line-height: 50%;
+    line-height: 100%;
 }
 
 .post p{
@@ -113,6 +120,15 @@
     top: -11%;
     left: 72%;
     right: 2%;
+}
+
+.info a{
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    color: #fff;
+    font-family: 'Akrobat';
+    text-decoration: none;
 }
 
 .info_post:last-child{

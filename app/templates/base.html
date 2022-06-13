@@ -11,14 +11,13 @@
 </head>
 <body>
     <header>
-        <a href="/"><img src="static/images/logo.png" alt="logo"></a>
+        <a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
         <nav>
             <a href="/about">О НАС</a>
-            <a href="/first_slet">1-Й СЛЕТ ВЕТЕРАНОВ ВССО - РСО</a>
+            <a href="/first_slet">1-Й СЛЕТ ВЕТЕРАНОВ</a>
             <a href="/documents">ДОКУМЕНТАЦИЯ</a>
             <a href="/clubs">КЛУБЫ ВЕТЕРАНОВ РОССИИ</a>
-            <a href="/news">НОВОСТИ</a>
-            <a href="/gallery">ФОТОГАЛЕРЕЯ</a>
+            <a href="/gallery">ГАЛЕРЕЯ</a>
             <a href="/music">ПЕСНИ СО РОССИИ</a>
             <a href="/contacts">КОНТАКТЫ</a>
         </nav>
@@ -30,8 +29,8 @@
     </main>
     <footer>
         <h1>© 2021 Официальный сайт движения ветеранов студенческих отрядов</h1>
-        <a href="#"><img src="static/images/vk.svg" alt="vk"></a>
-        <a href="#"><img src="static/images/telegram.svg" alt="instagram"></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/vk.svg') }}" alt="vk"></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/telegram.svg') }}" alt="instagram"></a>
         <div class="contact_info">  
             <p>КОНТАКТНОЕ ЛИЦО:</p>
             <h1>ТАТЬЯНА ЗВЕРЕВА</h1>

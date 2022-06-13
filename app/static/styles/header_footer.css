@@ -39,13 +39,12 @@ header nav a{
 
 main{
     position: relative;
-    min-height: calc(72vh - 60px);
+    min-height: calc(69vh - 20px);
 }
 
 footer{
-    margin-top: 20px;
-    margin-bottom: 0;
-    bottom: 0;
+    margin-top: 60px;
+
     height: 30px;
     align-items: center;
     padding: 2% 4%;

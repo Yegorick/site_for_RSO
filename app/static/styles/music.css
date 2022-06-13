@@ -22,71 +22,59 @@ main h2{
 
 .play_lists{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     margin-right: 5%;
     min-width: 18%;
 }
 
 .play_lists img{
     width: 100%;
+    max-width: 400px;
+    margin-bottom: 50px;
 }
 
 .musics{
     display: flex;
+    flex-direction: column;
 }
 
 .songs{
     position: relative;
-
-}
-
-.songs:last-child{
-    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .song{
-    max-width: 1000px;
     position: relative;
-    width: 3000%;
-    display: flex;
     background-color: #dca54d;
-    align-items: center;
-    margin-bottom: 3%;
+    height: 100%;
+    margin-bottom: 2%;
+    max-width: 1310px;
+    width: 100%;
 }
 
-.song img{
-    margin-left: 1%;
-    max-width: 4.5%;
-}
-
-.song h1{
-    font-size: 1.5em;
-}
-
-.song h2{
-    font-size: 1em;
-}
-
-.info{
-    margin-top: 1%;
-    margin-left: 3%;
-}
-
-.time{
+.song h4{
     position: absolute;
-    right: 7%;
+    z-index: 10;
+    top: -10px;
+    left: 10%;
 }
 
-.download{
+.song h5{
     position: absolute;
-    right: 2%;
+    z-index: 10;
+    bottom: -15px;
+    left: 10%;
 }
 
 audio{
-    margin-bottom: 2%;
-    width: 1000px;
+    margin-top: 20px;
+    max-width: 1310px;
+    width: 100%;
 }
 
 audio::-webkit-media-controls-panel{
-    background-color: #dca54d;
+    background-color: rgba(220, 165, 77, 1);
 }

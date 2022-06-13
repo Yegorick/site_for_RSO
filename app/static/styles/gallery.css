@@ -31,15 +31,20 @@ main p{
     text-decoration: none;
 }
 
-.albums a h1{
+.albums h3{
     font-size: 1.2em !important;
     font-family: 'Akrobat';
     color: #fff;
+    margin-top: 0;
 }
 
 .albums a p{
     font-family: 'Akrobat';
     color: #fff;
+}
+
+.albums img{
+    max-width: 300px;
 }
 
 .column{

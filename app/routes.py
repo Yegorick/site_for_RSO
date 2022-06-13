@@ -1,7 +1,7 @@
 from flask import render_template, url_for
-import os
+import os, zipfile
 
-from app import app, db, Songs, Document
+from app import app, db, Songs, Document, Album, Post, Contact
 
 file_path = os.path.abspath(os.path.dirname(__name__))
 
@@ -23,13 +23,13 @@ def documents():
     docs = db.session.query(Document).all()
     spis = {}
     for i in docs:
-        size = os.path.getsize(f'{file_path}/app/static/storage/files/{i.title}.pdf') / 1000
+        size = os.path.getsize(f'{file_path}/app/static/storage/files/{i.title}.pdf') / 1024
         if size >= 1000:
-            size /= 1000
-            size_str = f'{str(size)[:4]} МБ'
+            size /= 1024
+            size_str = f'{size:.1f} МБ'
             print(size_str)
         else:
-            size_str = f'{str(size)[:4]} КБ'
+            size_str = f'{size:.1f} КБ'
         spis[i.title] = size_str
     return render_template('documents.html', docs = docs, size=spis)
 
@@ -43,11 +43,23 @@ def news():
 
 @app.route('/gallery')
 def gallery():
-    return render_template('gallery.html')
+    albums = db.session.query(Album).all()
+    return render_template('gallery.html', albums=albums)
 
-@app.route('/photos')
-def photos():
-    return render_template('photos.html')
+@app.route('/gallery/<int:id>')
+def photos(id):
+    album = Album.query.get(id)
+    if zipfile.is_zipfile(f'app/static/storage/albums/{album.title}/{album.title}.zip'):
+        zip_info = zipfile.ZipFile(f'app/static/storage/albums/{album.title}/{album.title}.zip', 'r')
+        zip_info.extractall(f'app/static/storage/albums/{album.title}')
+        zip_info.close()
+        os.remove(f'app/static/storage/albums/{album.title}/{album.title}.zip')
+
+    photos = os.listdir(f'app/static/storage/albums/{album.title}')
+    print(photos)
+    print(album.title)
+    photos.remove(f'{album.title}.jpg')
+    return render_template('photos.html', photos=photos, id=id, album=album)
 
 @app.route('/music')
 def music():
@@ -56,4 +68,5 @@ def music():
 
 @app.route('/contacts')
 def contacts():
-    return render_template('contacts.html')
+    contacts = db.session.query(Contact).all()
+    return render_template('contacts.html', contacts=contacts)

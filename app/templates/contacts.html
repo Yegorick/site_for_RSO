@@ -9,11 +9,16 @@
 {% endblock %}
 
 {% block main %}
-<div class="contact">
-    <img src="/static/images/Tatyana.png" alt="Tatyana">
-    <div class="info">
-        <h1>татьяна ЗВЕРЕВА</h1>
-        <h2>+7 (913) 220-91-75</h2>
-    </div>
+<div class="container">
+    {% for i in contacts %}
+        <div class="contact">
+            <img src="/static/storage/contact_photo/{{ i.name }}.jpg" alt="contact">
+            <div class="info">
+                <h1>{{ i.name }}</h1>
+                <h2>{{ i.role }}</h2>
+                <a href="mailto:{{ i.email }}"><h3>{{ i.email }}</h3></a>
+            </div>
+        </div>
+    {% endfor %}
 </div>
 {% endblock %}

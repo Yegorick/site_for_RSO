@@ -9,18 +9,13 @@
 {% endblock %}
 
 {% block main %}
-    <h1>фотогалерея</h1>
-    {% for i in range(4) %}
+    <h1>галерея</h1>
+    {% for i in albums %}
         <div class="albums">
-            {% for i in range(4) %}
-                <a href="/photos">
-                    <div class="column">
-                        <img src="/static/images/blank.png" alt="">
-                        <h1>День рсо</h1>
-                        <p>17 февраля</p>
-                    </div>
-                </a>
-            {% endfor %}
+            <div class="column">
+                <a href="/gallery/{{ i.id }}"><img src="static/storage/albums/{{ i.title }}/{{ i.title }}.jpg" alt="album"></a>
+                <h3>{{ i.title }}</h3>
+            </div>
         </div>
     {% endfor %}
 {% endblock %}

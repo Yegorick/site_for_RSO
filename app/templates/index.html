@@ -11,13 +11,13 @@
 {% block main %}
 <div class="carousel">
     <div class="slide fade">
-        <img src="static/images/slide_show/first.jpg" style="width: 100%;" alt="">
+        <img src="static/images/slide_show/main.jpeg" style="width: 100%;" alt="">
     </div>
     <div class="slide fade">
-        <img src="static/images/slide_show/second.jpg" style="width: 100%;" alt="">
+        <img src="static/images/slide_show/main.jpeg" style="width: 100%;" alt="">
     </div>
     <div class="slide fade">
-        <img src="static/images/slide_show/third.jpg" style="width: 100%;" alt="">
+        <img src="static/images/slide_show/main.jpeg" style="width: 100%;" alt="">
     </div>
     <a class="prev" onclick="plusSlide(-1)">&#10094</a>
     <a class="next" onclick="plusSlide(1)">&#10095</a>
@@ -29,26 +29,34 @@
 </div>
 <script src="static/scripts/carousel.js"></script>
 <div class="posts">
-    <div class="post">
-        <img src="static/images/blank.png" alt="">
-        <h1>ЗАКРЫТИЕ ТРЕТЬЕГО ТРУДОВОГО СЕМЕСТРА</h1>
-        <p>26 октября</p>
-    </div>
-    <div class="post">
-        <img src="static/images/blank.png" alt="">
-        <h1>СЛЁТ СОП 2021</h1>
-        <p>07 ноября</p>
-    </div>
-    <div class="post">
-        <img src="static/images/blank.png" alt="">
-        <h1>ВСС062</h1>
-        <p>12 ноября</p>
-    </div>
-    <div class="post">
-        <img src="static/images/blank.png" alt="">
-        <h1>ДЕНЬ РСО</h1>
-        <p>17 февраля</p>
-    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSettKRuCh_eaiPYz8thMiRZoMHk74WHFa_eucVrAEts6Yvi2g/viewform">   
+        <div class="post">
+            <img src="static/images/V1.png" alt="">
+            <h1>ЗАКРЫТИЕ ТРЕТЬЕГО ТРУДОВОГО СЕМЕСТРА</h1>
+            <p>26 октября</p>
+        </div>
+    </a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhc-Lv3fNQtSmroAO4z5wwNyyqrrN0wHRTky1VQEmdbETcuw/viewform">
+        <div class="post">
+            <img src="static/images/V2.png" alt="">
+            <h1>СЛЁТ СОП 2021</h1>
+            <p>07 ноября</p>
+        </div>
+    </a>
+    <a href="/first_slet">
+        <div class="post">
+            <img src="static/images/V3.png" alt="">
+            <h1>ВСС062</h1>
+            <p>12 ноября</p>
+        </div>
+    </a>
+    <a href="https://docs.google.com/forms/d/1viQXJFkS7PgvmK1juW8pVKGBype3jqRU3yOYh3TBg5s/viewform?edit_requested=true">
+        <div class="post">
+            <img src="static/images/V4.png" alt="">
+            <h1>ДЕНЬ РСО</h1>
+            <p>17 февраля</p>
+        </div>
+    </a>
 </div>
 <div class="info">
     <div class="info_post">
@@ -99,5 +107,6 @@
         <h1>Совсем скоро станут известны результаты заочного этапа Всероссийского конкурса профессионального
              мастерства «ТрудКрут» по каждому из направлений</h1>
     </div>
+    <a href="/news">Новости >>></a>
 </div>
 {% endblock %}

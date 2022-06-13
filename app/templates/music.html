@@ -10,18 +10,21 @@
 
 {% block main %}
 <h1>песни со РОССИИ</h1>
-<h2>плейлисты</h2>
+<!--<h2>плейлисты</h2>-->
 <div class="musics">
     <div class="play_lists">
-        <a href="#"><img src="/static/images/play_list1.png" alt="play_list1"></a>
-        <a href="#"><img src="/static/images/play_list2.png" alt="play_list2"></a>
-        <a href="#"><img src="/static/images/play_list3.png" alt="play_list3"></a>
+        <a href="#"><img src="/static/images/Баннер_1_верхний.png" alt="play_list1"></a>
+        <a href="#"><img src="/static/images/Баннер_2_средний.png" alt="play_list2"></a>
+        <a href="#"><img src="/static/images/Баннер_3_нижний.png" alt="play_list3"></a>
     </div>
     <div class="songs">
         {% for i in songs %}
-            <audio src="/static/storage/songs/{{i.title}}.mp3" controls>
-                <h1>{{ i.title }}</h1>
-            </audio>
+            <div class="song">  
+                <h4>{{ i.title }}</h4> 
+                <audio src="/static/storage/songs/{{i.title}}.mp3" controls="">
+                </audio>
+                <h5>{{ i.squad }}</h5>
+            </div> 
         {% endfor %}
     </div>
 </div>
